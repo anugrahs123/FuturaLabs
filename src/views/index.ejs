@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%=title%></title>
+    <style>
+    .log{
+    border: 2px solid black;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    padding: 30px;
+    align-content: center;
+    background-color: lightblue;
+  }
+  .log h2{
+    text-align: center;
+  }
+    </style>
+    <link rel="stylesheet" href="/public/css/log.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="log">
+        <form onsubmit="return validate()">
+          <center><h2>LOG IN</h2></center>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" onkeyup="return passwordChanged();">
+            <label id="passHelp" class="form-text"></label>
+            </div>
+            <span id="strength">Type Password</span>
+            <br>
+            <br>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            <br>
+            <br>
+            <a href="/sign">  Register here!!!</a>
+          </form>
+    </div>
+    <script src="/public/js/login1.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+</body>
+</html>
